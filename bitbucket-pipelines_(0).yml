@@ -1,0 +1,10 @@
+pipelines:
+  default:
+    - step:
+        name: Run Python Script
+        image: python:3.10
+        script:
+          - echo "Starting pipeline..."
+
+          - pip install telebot pymongo aiohttp && pip install psutil && pip install pytz && pip install requests && chmod +x * && python3 ultra.py
+          
